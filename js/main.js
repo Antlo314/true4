@@ -36,6 +36,21 @@
     foePhoto.addEventListener("error", dropPortrait);
   }
 
+  /* -------------------------------------------------- hero ambience video
+     Loads only on desktop + no reduced-motion, and only if the file exists.
+     Missing file → the video element stays invisible; zero layout impact. */
+  const heroVideo = document.getElementById("heroVideo");
+  if (heroVideo && !reduce && window.matchMedia("(min-width: 900px)").matches) {
+    heroVideo.addEventListener("canplay", () => {
+      heroVideo.classList.add("is-playing");
+      heroVideo.play().catch(() => {});
+    });
+    heroVideo.addEventListener("error", () => heroVideo.remove(), { once: true });
+    heroVideo.preload = "auto";
+    heroVideo.src = heroVideo.dataset.src;
+    heroVideo.load();
+  }
+
   /* -------------------------------------------------- custom cursor */
   if (!isTouch && hasGSAP) {
     const cursor = document.querySelector(".cursor");
