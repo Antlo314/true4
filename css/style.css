@@ -728,9 +728,30 @@ body::before {
 .footer__links a:hover { color: var(--gold-bright); }
 .footer__legal { display: flex; flex-direction: column; gap: 0.2rem; text-align: right; font-size: 0.75rem; color: var(--smoke-2); letter-spacing: 0.06em; }
 .footer__prevail { font-family: var(--f-serif); font-style: italic; color: var(--rose); }
+.footer__powered {
+  display: inline-flex; align-items: baseline; gap: 0.45em;
+  margin-top: 0.55rem; justify-content: flex-end;
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.22em;
+  color: var(--smoke-2); transition: color .3s;
+}
+.footer__powered b {
+  font-weight: 600;
+  background: linear-gradient(120deg, var(--champ), var(--gold-bright));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.footer__powered-spark {
+  color: var(--rose); font-size: 0.8em;
+  transition: text-shadow .3s, color .3s;
+}
+.footer__powered:hover { color: var(--smoke); }
+.footer__powered:hover .footer__powered-spark {
+  color: var(--gold-bright);
+  text-shadow: 0 0 10px rgba(237,207,138,0.8);
+}
 @media (max-width: 640px) {
   .footer { flex-direction: column; text-align: center; }
   .footer__legal { text-align: center; }
+  .footer__powered { justify-content: center; }
 }
 
 /* ===================== REVEAL (JS-driven) ===================== */
