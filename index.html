@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRU FOE — Tha Solid One · IV</title>
+  <meta name="description" content="The official HUB of Tru Foe (4) — 'Tha Solid One'. Chicago battle rapper & recording artist. Battles, music, and every channel in one place. Only the solid prevail." />
+
+  <!-- Social -->
+  <meta property="og:title" content="TRU FOE — Tha Solid One · IV" />
+  <meta property="og:description" content="Chicago battle rapper & recording artist. 40+ battles. New album out now. Only the solid prevail." />
+  <meta property="og:image" content="https://antlo314.github.io/true4/assets/img/album-cover.jpg" />
+  <meta property="og:url" content="https://antlo314.github.io/true4/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon: the IV mark -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0807'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23d8b877' text-anchor='middle'%3EIV%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ FILM GRAIN + VIGNETTE OVERLAYS ============ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__mark">IV</div>
+      <div class="loader__word">THA SOLID ONE</div>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <div class="loader__count"><span id="loaderCount">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" data-cursor="hover">
+      <span class="nav__logo-tf">TRU FOE</span>
+      <span class="nav__logo-iv">IV</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#music" data-cursor="hover">Music</a>
+      <a href="#battles" data-cursor="hover">Battles</a>
+      <a href="#channels" data-cursor="hover">Channels</a>
+      <a href="#booking" data-cursor="hover">Booking</a>
+    </nav>
+    <a href="https://docdamindbenda.bandcamp.com/album/street-niggaz-dont-do-brunch" target="_blank" rel="noopener" class="nav__cta" data-cursor="hover">
+      <span>New Album</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <main id="top">
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">
+            <span class="dot"></span> Chicago, IL &nbsp;·&nbsp; Battle Rap &nbsp;·&nbsp; Recording Artist
+          </p>
+
+          <h1 class="hero__title" aria-label="Tru Foe">
+            <span class="line"><span class="word">TRU</span></span>
+            <span class="line"><span class="word">FOE</span></span>
+          </h1>
+
+          <p class="hero__sub">
+            <span class="hero__serif">“ Tha&nbsp;Solid&nbsp;One ”</span>
+            <span class="hero__iv">4️⃣ · IV</span>
+          </p>
+
+          <p class="hero__tag" aria-label="Only the solid prevail">
+            Only&nbsp;the&nbsp;<b>Solid</b>&nbsp;prevail<span class="hero__tag-dot">.</span>
+          </p>
+
+          <div class="hero__actions">
+            <a href="#music" class="btn btn--gold" data-cursor="hover" data-magnetic>
+              <span>Hear the album</span>
+            </a>
+            <a href="#battles" class="btn btn--ghost" data-cursor="hover" data-magnetic>
+              <span>Watch the battles</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero__portrait" id="portrait">
+          <div class="hero__portrait-frame">
+            <img src="assets/img/foe.jpg" alt="Tru Foe — Tha Solid One, live at a battle event" id="foePhoto" />
+            <div class="hero__portrait-tone" aria-hidden="true"></div>
+          </div>
+          <figcaption class="hero__portrait-cap">
+            <span class="cap-name">Tru Foe</span>
+            <span class="cap-loc">Live · Chicago, IL</span>
+          </figcaption>
+          <span class="hero__portrait-stamp" aria-hidden="true">IV</span>
+        </figure>
+      </div>
+
+      <a href="#music" class="hero__scroll" data-cursor="hover" aria-label="Scroll down">
+        <span>Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee">
+        <span>Tha Solid One <em>✦</em> Only The Solid Prevail <em>✦</em> Chicago <em>✦</em> IV <em>✦</em> Street Niggaz Don't Do Brunch <em>✦</em> Tha Solid One <em>✦</em> Only The Solid Prevail <em>✦</em> Chicago <em>✦</em> IV <em>✦</em> Street Niggaz Don't Do Brunch <em>✦</em> </span>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" id="stats">
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="40" data-suffix="+">0</span>
+        <span class="stat__label">Battles Catalogued</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="515" data-suffix="K+">0</span>
+        <span class="stat__label">Battle Views</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="12" data-suffix="">0</span>
+        <span class="stat__label">Tracks · New LP</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="1" data-suffix="" data-word="CHI">0</span>
+        <span class="stat__label">City On His Back</span>
+      </div>
+    </section>
+
+    <!-- ============ MUSIC ============ -->
+    <section class="section music" id="music">
+      <div class="section__head" data-reveal>
+        <div class="section__row">
+          <span class="section__index">01</span>
+          <span class="section__rule" aria-hidden="true"></span>
+          <p class="section__kicker">Out now on Bandcamp</p>
+        </div>
+        <h2 class="section__title">The&nbsp;<span class="ital">Music</span></h2>
+      </div>
+
+      <div class="music__body">
+        <div class="music__art" data-reveal data-tilt>
+          <div class="music__art-frame">
+            <img src="assets/img/album-cover.jpg" alt="Street Niggaz Don't Do Brunch — album cover" />
+            <span class="music__advisory">Parental Advisory · Explicit Content</span>
+          </div>
+          <div class="music__art-shadow" aria-hidden="true"></div>
+        </div>
+
+        <div class="music__info">
+          <p class="music__meta" data-reveal>Album · 2026 · w/ Doc Da Mindbenda</p>
+          <h3 class="music__albumtitle" data-reveal>Street Niggaz<br />Don't Do Brunch</h3>
+          <p class="music__desc" data-reveal>
+            Twelve records of Chicago boom-bap and cold-blooded storytelling. Grit served
+            on fine china — the sound of the street sitting down at the table it was told
+            it didn't belong at. Lyrics by Tru Foe, production by Doc Da Mindbenda at GrindHouse Studio.
+          </p>
+
+          <div class="music__player" data-reveal>
+            <span class="music__player-label">Press play — right here</span>
+            <iframe
+              title="Street Niggaz Don't Do Brunch — Bandcamp player"
+              src="https://bandcamp.com/EmbeddedPlayer/album=807014247/size=large/bgcol=0a0807/linkcol=edcf8a/artwork=none/tracklist=false/transparent=true/"
+              seamless
+              loading="lazy"></iframe>
+          </div>
+
+          <ol class="tracklist" data-reveal>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/no-brunch" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">01</span><span class="t-t">No Brunch</span><span class="t-d">2:03</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/chicken-and-waffles-ft-panamera-p" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">02</span><span class="t-t">Chicken and Waffles <em>ft. Panamera P</em></span><span class="t-d">2:39</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/sunnyside-up-product-of-the-north" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">03</span><span class="t-t">Sunnyside Up <em>(Product of the North)</em></span><span class="t-d">2:42</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/liar-foe-interlude" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">04</span><span class="t-t">Liar Foe <em>(interlude)</em></span><span class="t-d">0:39</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/liar-foe" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">05</span><span class="t-t">Liar Foe</span><span class="t-d">3:08</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/street-romance-ft-heavy-half" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">06</span><span class="t-t">Street Romance <em>ft. Heavy Half</em></span><span class="t-d">3:05</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/mimosa-flow" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">07</span><span class="t-t">Mimosa Flow</span><span class="t-d">2:37</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/brunch-meetings-ft-heavy-half" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">08</span><span class="t-t">Brunch Meetings <em>ft. Heavy Half</em></span><span class="t-d">3:12</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/thousand-dollar-nights" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">09</span><span class="t-t">Thousand Dollar Nights</span><span class="t-d">3:06</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/joy-taylor" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">10</span><span class="t-t">Joy Taylor</span><span class="t-d">2:55</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/red-zone-ft-heavy-half" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">11</span><span class="t-t">Red Zone <em>ft. Heavy Half</em></span><span class="t-d">3:24</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://docdamindbenda.bandcamp.com/track/only-the-solid-prevail" target="_blank" rel="noopener" data-cursor="hover"><span class="t-n">12</span><span class="t-t">Only The Solid Prevail</span><span class="t-d">1:56</span><span class="t-go" aria-hidden="true">↗</span></a></li>
+          </ol>
+
+          <a href="https://docdamindbenda.bandcamp.com/album/street-niggaz-dont-do-brunch" target="_blank" rel="noopener" class="btn btn--gold" data-cursor="hover" data-magnetic data-reveal>
+            <span>Listen on Bandcamp</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BATTLES ============ -->
+    <section class="section battles" id="battles">
+      <div class="section__head" data-reveal>
+        <div class="section__row">
+          <span class="section__index">02</span>
+          <span class="section__rule" aria-hidden="true"></span>
+          <p class="section__kicker">Chicago's most solid on the mic</p>
+        </div>
+        <h2 class="section__title">The&nbsp;<span class="ital">Battles</span></h2>
+      </div>
+
+      <div class="battles__grid">
+        <a class="battle battle--feature" href="https://www.youtube.com/watch?v=sZlnPIu0Dv0" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+          <div class="battle__thumb">
+            <img src="https://i.ytimg.com/vi/sZlnPIu0Dv0/hqdefault.jpg" alt="" loading="lazy" />
+            <span class="battle__play"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="battle__badge">Featured</span>
+          </div>
+          <div class="battle__meta">
+            <span class="battle__vs">Philly vs Chicago · The Battle Academy</span>
+            <h3 class="battle__name">Tru Foe vs Shankk Prezzy</h3>
+          </div>
+        </a>
+
+        <div class="battles__side">
+          <a class="battle" href="https://www.youtube.com/watch?v=ywMiVB2rmCI" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+            <div class="battle__thumb">
+              <img src="https://i.ytimg.com/vi/ywMiVB2rmCI/hqdefault.jpg" alt="" loading="lazy" />
+              <span class="battle__play"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="battle__meta">
+              <span class="battle__vs">BMBL</span>
+              <h3 class="battle__name">X Factor vs Tru Foe</h3>
+            </div>
+          </a>
+
+          <a class="battle" href="https://www.youtube.com/watch?v=S8RnaDfXClI" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+            <div class="battle__thumb">
+              <img src="https://i.ytimg.com/vi/S8RnaDfXClI/hqdefault.jpg" alt="" loading="lazy" />
+              <span class="battle__play"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="battle__meta">
+              <span class="battle__vs">iLLANOiZE Radio</span>
+              <h3 class="battle__name">The Interview — Battle Rap & Music Therapy</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="battles__foot" data-reveal>
+        <a href="https://www.youtube.com/@TruIV638" target="_blank" rel="noopener" class="btn btn--ghost" data-cursor="hover" data-magnetic>
+          <span>All battles on YouTube</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+        <a href="https://versetracker.com/rapper/trufoe" target="_blank" rel="noopener" class="battles__vt" data-cursor="hover">
+          Full battle record on VerseTracker →
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CHANNELS HUB ============ -->
+    <section class="section channels" id="channels">
+      <div class="section__head" data-reveal>
+        <div class="section__row">
+          <span class="section__index">03</span>
+          <span class="section__rule" aria-hidden="true"></span>
+          <p class="section__kicker">Every channel. One solid front.</p>
+        </div>
+        <h2 class="section__title">The&nbsp;<span class="ital">Hub</span></h2>
+      </div>
+
+      <div class="channels__grid">
+        <a class="chan chan--ig" href="https://www.instagram.com/_trufoe/" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+          <div class="chan__top">
+            <span class="chan__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="chan__arrow">↗</span>
+          </div>
+          <div class="chan__bottom">
+            <span class="chan__handle">@_trufoe</span>
+            <span class="chan__plat">Instagram</span>
+            <span class="chan__desc">Daily · behind the bars</span>
+          </div>
+        </a>
+
+        <a class="chan chan--yt" href="https://www.youtube.com/@TruIV638" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+          <div class="chan__top">
+            <span class="chan__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M23 12s0-3.5-.45-5.2a2.9 2.9 0 0 0-2-2C18.8 4.3 12 4.3 12 4.3s-6.8 0-8.55.5a2.9 2.9 0 0 0-2 2C1 8.5 1 12 1 12s0 3.5.45 5.2a2.9 2.9 0 0 0 2 2c1.75.5 8.55.5 8.55.5s6.8 0 8.55-.5a2.9 2.9 0 0 0 2-2C23 15.5 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg>
+            </span>
+            <span class="chan__arrow">↗</span>
+          </div>
+          <div class="chan__bottom">
+            <span class="chan__handle">@TruIV638</span>
+            <span class="chan__plat">YouTube</span>
+            <span class="chan__desc">Battles · full footage</span>
+          </div>
+        </a>
+
+        <a class="chan chan--bc" href="https://docdamindbenda.bandcamp.com/album/street-niggaz-dont-do-brunch" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+          <div class="chan__top">
+            <span class="chan__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M0 18.75l7.4-13.5H24l-7.4 13.5z"/></svg>
+            </span>
+            <span class="chan__arrow">↗</span>
+          </div>
+          <div class="chan__bottom">
+            <span class="chan__handle">Street Niggaz Don't Do Brunch</span>
+            <span class="chan__plat">Bandcamp</span>
+            <span class="chan__desc">Stream · buy the LP</span>
+          </div>
+        </a>
+
+        <a class="chan chan--x" href="https://x.com/foe_tru" target="_blank" rel="noopener" data-reveal data-cursor="hover">
+          <div class="chan__top">
+            <span class="chan__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </span>
+            <span class="chan__arrow">↗</span>
+          </div>
+          <div class="chan__bottom">
+            <span class="chan__handle">@foe_tru</span>
+            <span class="chan__plat">X / Twitter</span>
+            <span class="chan__desc">Live · from the road</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING / FOOTER ============ -->
+    <section class="booking" id="booking">
+      <div class="booking__inner">
+        <p class="booking__eyebrow" data-reveal>Booking · Features · Battles</p>
+        <h2 class="booking__title" aria-label="Let's work">
+          <span class="line"><span class="word">LET'S</span></span>
+          <span class="line"><span class="word">WORK</span></span>
+        </h2>
+        <p class="booking__sub" data-reveal>Serious inquiries only. Slide through the DMs — solid moves get solid replies.</p>
+        <a href="https://www.instagram.com/_trufoe/" target="_blank" rel="noopener" class="btn btn--gold btn--lg" data-cursor="hover" data-magnetic data-reveal>
+          <span>DM @_trufoe</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__mark">
+          <span class="footer__tf">TRU FOE</span>
+          <span class="footer__iv">IV</span>
+        </div>
+        <nav class="footer__links">
+          <a href="https://www.instagram.com/_trufoe/" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
+          <a href="https://www.youtube.com/@TruIV638" target="_blank" rel="noopener" data-cursor="hover">YouTube</a>
+          <a href="https://docdamindbenda.bandcamp.com/album/street-niggaz-dont-do-brunch" target="_blank" rel="noopener" data-cursor="hover">Bandcamp</a>
+          <a href="https://x.com/foe_tru" target="_blank" rel="noopener" data-cursor="hover">X</a>
+        </nav>
+        <p class="footer__legal">
+          <span>© <span id="year">2026</span> Tru Foe. Tha Solid One.</span>
+          <span class="footer__prevail">Only the solid prevail.</span>
+        </p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/hero3d.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
