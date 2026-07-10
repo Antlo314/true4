@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Office — Tru Foe Admin</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0807'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23d8b877' text-anchor='middle'%3EIV%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="admin-body">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="nav is-scrolled">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-tf">TRU FOE</span>
+      <span class="nav__logo-iv">IV</span>
+    </a>
+    <span style="margin-left:auto;font-family:var(--f-condensed);letter-spacing:0.3em;font-size:0.8rem;color:var(--smoke-2);">THE OFFICE</span>
+  </header>
+
+  <main class="admin-main">
+
+    <!-- ===== setup notice (no Firebase config yet) ===== -->
+    <section class="admin-setup card-form" id="setupView" hidden>
+      <div class="card-form__border" aria-hidden="true"></div>
+      <div class="card-form__inner">
+        <div class="admin-gate__mark">IV</div>
+        <div class="admin-gate__word">THE OFFICE · SETUP</div>
+        <p style="color:var(--smoke);">
+          The inbox isn't connected yet. One-time setup (~5 minutes, free):
+        </p>
+        <ol>
+          <li>Go to <code>console.firebase.google.com</code> → Add project (call it <code>trufoe-hub</code>, Analytics off).</li>
+          <li>Build → <b>Firestore Database</b> → Create (production mode).</li>
+          <li>Build → <b>Authentication</b> → Sign-in method → enable <b>Email/Password</b>, then Users → Add user (Foe's login for this page).</li>
+          <li>Project settings → Your apps → Web app (<code>&lt;/&gt;</code>) → copy the <code>firebaseConfig</code> values into <code>js/site-config.js</code>.</li>
+          <li>Firestore → Rules → paste the rules from <code>firestore.rules</code> in the repo → Publish.</li>
+        </ol>
+        <p style="margin-top:1rem;color:var(--smoke-2);font-size:0.85rem;">
+          Push the config change and this page becomes the live inbox.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== login gate ===== -->
+    <section class="admin-gate card-form" id="gateView" hidden>
+      <div class="card-form__border" aria-hidden="true"></div>
+      <div class="card-form__inner">
+        <div class="admin-gate__mark">IV</div>
+        <div class="admin-gate__word">THE OFFICE</div>
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="aEmail">Email</label>
+            <input type="email" id="aEmail" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="aPass">Password</label>
+            <input type="password" id="aPass" autocomplete="current-password" required />
+          </div>
+          <button type="submit" class="btn btn--gold card-form__submit" style="width:100%;justify-content:center;">
+            <span class="card-form__submit-label">Open the office</span>
+          </button>
+          <p class="card-form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== dashboard ===== -->
+    <section id="dashView" hidden>
+      <div class="admin-head">
+        <h1>The <span class="ital">Office</span></h1>
+        <button class="admin-signout" id="signOut">Sign out</button>
+      </div>
+
+      <div class="admin-stats">
+        <div class="admin-stat"><b id="statNew">–</b><span>New · unread</span></div>
+        <div class="admin-stat"><b id="statInq">–</b><span>Booking inquiries</span></div>
+        <div class="admin-stat"><b id="statQ">–</b><span>Questions & suggestions</span></div>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="admin-tab is-active" data-tab="inquiries" id="tabInq">Inquiries<span class="n" id="tabInqN"></span></button>
+        <button class="admin-tab" data-tab="questions" id="tabQ">Speak On It<span class="n" id="tabQN"></span></button>
+      </div>
+
+      <div class="admin-list" id="list"></div>
+    </section>
+
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="js/site-config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

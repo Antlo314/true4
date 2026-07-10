@@ -54,6 +54,7 @@
       <a href="#music" data-cursor="hover">Music</a>
       <a href="#battles" data-cursor="hover">Battles</a>
       <a href="#channels" data-cursor="hover">Channels</a>
+      <a href="#speak" data-cursor="hover">Speak On It</a>
       <a href="#booking" data-cursor="hover">Booking</a>
     </nav>
     <a href="https://docdamindbenda.bandcamp.com/album/street-niggaz-dont-do-brunch" target="_blank" rel="noopener" class="nav__cta" data-cursor="hover">
@@ -338,6 +339,70 @@
       </div>
     </section>
 
+    <!-- ============ SPEAK ON IT — questions & suggestions ============ -->
+    <section class="section speak" id="speak">
+      <div class="section__head" data-reveal>
+        <div class="section__row">
+          <span class="section__index">04</span>
+          <span class="section__rule" aria-hidden="true"></span>
+          <p class="section__kicker">Questions · Suggestions · The floor is yours</p>
+        </div>
+        <h2 class="section__title">Speak&nbsp;<span class="ital">On&nbsp;It</span></h2>
+      </div>
+
+      <div class="speak__body">
+        <div class="speak__copy" data-reveal>
+          <p class="speak__lead">
+            Got a question for Foe? A bar you need decoded, a battle you want to see,
+            a suggestion for the next drop? Put it on the table.
+          </p>
+          <p class="speak__note">
+            Every message lands directly with Tru Foe.
+            <span class="speak__note-em">Real ones get real answers.</span>
+          </p>
+          <div class="speak__marks" aria-hidden="true">
+            <span>✦ No industry middlemen</span>
+            <span>✦ Read personally</span>
+            <span>✦ Chicago certified</span>
+          </div>
+        </div>
+
+        <form class="card-form" id="questionForm" data-reveal novalidate>
+          <div class="card-form__border" aria-hidden="true"></div>
+          <div class="card-form__inner">
+            <div class="field">
+              <label for="qName">Name / alias</label>
+              <input type="text" id="qName" name="name" maxlength="80" placeholder="Who's asking?" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="qContact">IG handle or email <span class="field__opt">(if you want an answer back)</span></label>
+              <input type="text" id="qContact" name="contact" maxlength="120" placeholder="@handle · you@email.com" />
+            </div>
+            <div class="field">
+              <label for="qType">What is it?</label>
+              <div class="field__select">
+                <select id="qType" name="type">
+                  <option value="question">Question for Foe</option>
+                  <option value="suggestion">Suggestion</option>
+                  <option value="battle">Battle I want to see</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="qMessage">Say it</label>
+              <textarea id="qMessage" name="message" rows="4" maxlength="1200" required placeholder="Keep it solid…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--gold card-form__submit" data-cursor="hover" data-magnetic>
+              <span class="card-form__submit-label">Send it up</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </button>
+            <p class="card-form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- ============ BOOKING / FOOTER ============ -->
     <section class="booking" id="booking">
       <div class="booking__inner">
@@ -346,11 +411,48 @@
           <span class="line"><span class="word">LET'S</span></span>
           <span class="line"><span class="word">WORK</span></span>
         </h2>
-        <p class="booking__sub" data-reveal>Serious inquiries only. Slide through the DMs — solid moves get solid replies.</p>
-        <a href="https://www.instagram.com/_trufoe/" target="_blank" rel="noopener" class="btn btn--gold btn--lg" data-cursor="hover" data-magnetic data-reveal>
-          <span>DM @_trufoe</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
-        </a>
+        <p class="booking__sub" data-reveal>Serious inquiries only. Lay it out below — solid moves get solid replies.</p>
+
+        <form class="card-form card-form--booking" id="bookingForm" data-reveal novalidate>
+          <div class="card-form__border" aria-hidden="true"></div>
+          <div class="card-form__inner">
+            <div class="card-form__grid">
+              <div class="field">
+                <label for="bName">Name</label>
+                <input type="text" id="bName" name="name" maxlength="80" required placeholder="Your name" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="bContact">Email or IG</label>
+                <input type="text" id="bContact" name="contact" maxlength="120" required placeholder="you@email.com · @handle" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="bType">What are we doing?</label>
+              <div class="field__select">
+                <select id="bType" name="type">
+                  <option value="booking">Booking · show</option>
+                  <option value="battle">Battle offer</option>
+                  <option value="feature">Feature · verse</option>
+                  <option value="press">Press · interview</option>
+                  <option value="other">Other business</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="bMessage">The details</label>
+              <textarea id="bMessage" name="message" rows="4" maxlength="1600" required placeholder="Date, city, budget, vision — lay it out…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--gold btn--lg card-form__submit" data-cursor="hover" data-magnetic>
+              <span class="card-form__submit-label">Send the inquiry</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </button>
+            <p class="card-form__status" role="status" aria-live="polite"></p>
+            <p class="card-form__alt">
+              Prefer the DMs?
+              <a href="https://www.instagram.com/_trufoe/" target="_blank" rel="noopener" data-cursor="hover">@_trufoe ↗</a>
+            </p>
+          </div>
+        </form>
       </div>
 
       <footer class="footer">
@@ -390,5 +492,11 @@
   </script>
   <script type="module" src="js/hero3d.js"></script>
   <script src="js/main.js" defer></script>
+
+  <!-- forms backend (Firebase; offline-safe until configured) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+  <script src="js/site-config.js" defer></script>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>
